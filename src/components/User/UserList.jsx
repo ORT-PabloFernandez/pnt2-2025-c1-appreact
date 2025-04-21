@@ -1,21 +1,20 @@
 import User from "./User";
 import "./user.css";
+import users from "../moc/users";
 
 export default function UserList() {
-  // TODO: Iterar por todos los usuarios que estan en moc/user.js
+  // TODO: Iterar por todos los usuarios que estan en moc/users.js
   // este componente va mostrar a todos los usuarios.
+  console.log(users);
   return (
     <ul className="users-list">
-      <User
-        UserName="Adele Vance"
-        Picture="./img/Adele Vance.jpg"
-        Title="Inge"
-      />
-      <User
-        UserName="Alex Wilber"
-        Picture="./img/Alex Wilber.jpg"
-        Title="Marketing"
-      />
+      {users.map((user) => (
+        <User
+          UserName={user["Display name"]}
+          Picture={`./img/${user["Display name"]}.jpg`}
+          Title={user.Title}
+        />
+      ))}
     </ul>
   );
 }
