@@ -16,7 +16,7 @@ function Cabecera() {
       </nav>
 
       <div className="cabecera__usuario">
-        <img src="img/Pablo Fernandez.jpg" alt="Usuario logueado" />
+        <img src="img/Adele Vance.jpg" alt="Usuario logueado" />
       </div>
     </header>
   );
