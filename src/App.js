@@ -9,7 +9,9 @@ import UserPage from "./components/User/UserPage";
 function App() {
   return (
     <>
-      <UserPage />
+      <Cabecera />
+      <BeerList />
+      <PieDePagina />
     </>
   );
 }

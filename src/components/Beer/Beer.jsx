@@ -6,6 +6,8 @@ import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function Beer(props) {
+  // TODO: Agregar boton comprar, cada vez que se presiona incrementa el contador del
+  // componente de Carrito
   const [liked, setLiked] = useState(false);
 
   const toggleLike = () => {

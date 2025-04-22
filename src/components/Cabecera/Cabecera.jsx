@@ -3,6 +3,8 @@ import React from "react";
 import "./cabecera.css";
 
 function Cabecera() {
+  // TODO: Agregar Carrito con un contador, este contador se va incrementar cada vez que se presione
+  // el boton Comprar
   return (
     <header className="cabecera">
       <div className="cabecera__logo">
