@@ -34,6 +34,14 @@ function Beer(props) {
         <h3 className="beer-card-title">{props.name}</h3>
         <p className="beer-card-type">{props.type}</p>
         <p className="beer-card-abv">ABV: {props.abv}%</p>
+        <button
+          className="buy-button"
+          onClick={() => {
+            props.onComprar();
+          }}
+        >
+          <FontAwesomeIcon icon={faCartShopping} /> Comprar
+        </button>
       </div>
     </div>
   );

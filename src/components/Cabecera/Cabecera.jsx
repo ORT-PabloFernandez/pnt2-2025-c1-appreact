@@ -1,8 +1,9 @@
-// Cabecera.jsx
 import React from "react";
 import "./cabecera.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-function Cabecera() {
+function Cabecera(props) {
   // TODO: Agregar Carrito con un contador, este contador se va incrementar cada vez que se presione
   // el boton Comprar
   return (
@@ -16,9 +17,14 @@ function Cabecera() {
         <a href="/nosotros">Nosotros</a>
         <a href="/contacto">Contacto</a>
       </nav>
-
-      <div className="cabecera__usuario">
-        <img src="img/Adele Vance.jpg" alt="Usuario logueado" />
+      <div className="cabecera__acciones">
+        <div className="cabecera__carrito">
+          <FontAwesomeIcon icon={faShoppingCart} />
+          <span className="carrito__contador">{props.carrito}</span>
+        </div>
+        <div className="cabecera__usuario">
+          <img src="/img/Adele Vance.jpg" alt="Usuario logueado" />
+        </div>
       </div>
     </header>
   );

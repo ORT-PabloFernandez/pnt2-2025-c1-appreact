@@ -1,18 +1,22 @@
-import "./App.css";
-//import UserList from "./components/User/UserList";
-import BeerList from "./components/Beer/BeerList";
+import React, { useState } from "react";
 import Cabecera from "./components/Cabecera/Cabecera";
-import PieDePagina from "./components/Pie/PieDePagina";
-import UserPage from "./components/User/UserPage";
-//import PieDePagina from "./components/Pie/PieDePagina";
+import BeerList from "./components/Beer/BeerList";
+import "./App.css";
 
 function App() {
+  const [carrito, setCarrito] = useState(0);
+
+  const handleComprar = () => {
+    setCarrito(carrito + 1);
+  };
+
   return (
-    <>
-      <Cabecera />
-      <BeerList />
-      <PieDePagina />
-    </>
+    <div className="App">
+      <Cabecera carrito={carrito} />
+      <main style={{ padding: "24px" }}>
+        <BeerList onComprar={handleComprar} />
+      </main>
+    </div>
   );
 }
 
