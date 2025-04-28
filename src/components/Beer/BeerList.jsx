@@ -1,12 +1,12 @@
 import Beer from "./Beer";
-import beers from "../moc/beers.js";
+
 
 function BeerList(props) {
   return (
     <div
       style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
     >
-      {beers.map((beer, index) => (
+      {props.beers.map((beer, index) => (
         <Beer
           key={index}
           name={beer.name}
